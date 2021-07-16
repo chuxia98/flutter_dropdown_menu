@@ -63,8 +63,8 @@ class DefaultDropdownMenuController extends StatefulWidget {
   final DropdownMenuOnSelected onSelected;
 
   static DropdownMenuController of(BuildContext context) {
-    final _DropdownMenuControllerScope scope =
-        context.inheritFromWidgetOfExactType(_DropdownMenuControllerScope);
+    final _DropdownMenuControllerScope scope = context
+        .dependOnInheritedWidgetOfExactType<_DropdownMenuControllerScope>();
     return scope?.controller;
   }
 
